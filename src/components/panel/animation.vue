@@ -10,10 +10,10 @@
 
     <div class="panel-row">
       <icon name="film" />
-      <div class="panel-label">{{ $t('panel.animation.select') }}</div>
+      <div class="panel-label">{{ $t('messages.panel.animation.select') }}</div>
       <div class="panel-value">
         <select v-model="currentName">
-          <option value="">无</option>
+          <option value="">{{ $t('data.no') }}</option>
           <option v-for="(val, index) in animationNames" :key="index" :value="val">{{ val }}</option>
         </select>
       </div>
@@ -23,39 +23,39 @@
       <hr>
       <div class="panel-row">
         <icon name="type" />
-        <div class="panel-label">动画名称</div>
+        <div class="panel-label"> {{$t('data.name')}} </div>
         <div class="panel-value">
-          <input type="text" v-model.trim="currentAnimation.name" @input="validateName" placeholder="动画名称，仅限英文">
+          <input type="text" v-model.trim="currentAnimation.name" @input="validateName" placeholder="">
         </div>
       </div>
 
       <div class="panel-row">
         <icon name="clock" />
-        <div class="panel-label">动画时长</div>
+        <div class="panel-label">{{ $t('data.duration') }}</div>
         <div class="panel-value">
-          <input type="text" v-model.number="currentAnimation.duration" placeholder="请输入大于0的数字">
+          <input type="text" v-model.number="currentAnimation.duration" placeholder="">
         </div>
       </div>
 
       <div class="panel-row">
         <icon name="watch" />
-        <div class="panel-label">动画延迟</div>
+        <div class="panel-label">{{$t('data.delay')}}</div>
         <div class="panel-value">
-          <input type="text" v-model.number="currentAnimation.delay" placeholder="请输入不小于0的数字">
+          <input type="text" v-model.number="currentAnimation.delay" placeholder="">
         </div>
       </div>
 
       <div class="panel-row">
         <icon name="repeat" />
-        <div class="panel-label">动画循环</div>
+        <div class="panel-label">{{$t('data.iteration')}}</div>
         <div class="panel-value">
-          <input type="text" v-model.number="currentAnimation.iteration" placeholder="输入0表示无限循环">
+          <input type="text" v-model.number="currentAnimation.iteration" placeholder="">
         </div>
       </div>
 
       <div class="panel-row">
         <icon name="activity" />
-        <div class="panel-label">缓动函数</div>
+        <div class="panel-label">{{$t('data.timing')}}</div>
         <div class="panel-value">
           <select v-model="currentAnimation.timing">
             <option>linear</option>
@@ -69,7 +69,7 @@
 
       <div class="panel-row">
         <icon name="rotate-cw" />
-        <div class="panel-label">动画方向</div>
+        <div class="panel-label">{{$t('data.direction')}}</div>
         <div class="panel-value">
           <select v-model="currentAnimation.direction">
             <option>normal</option>
@@ -107,7 +107,7 @@
         <textarea placeholder="IMPORTANT: use rem, not px" v-model="val.css"></textarea>
         <div style="margin: 10px 0 0 20px;">
           <button v-if="i + 1 === currentAnimation.keyframes.length" class="btn btn-primary" @click="addkeyframe">
-            <icon name="plus" /> 添加新的动画
+            <icon name="plus" /> {{$t('data.actions.add')}}
           </button>
         </div>
       </div>
