@@ -1,9 +1,9 @@
 {
-  "name": "vue-page-designer",
+  "name": "vue-page-designer-daniildeveloperforks",
   "version": "0.7.1",
   "description": "A vue component for drag-and-drop to design and build mobile website.",
   "repository": {
-    "url": "fireyy/vue-page-designer",
+    "url": "daniildeveloperforks/vue-page-designer",
     "type": "git"
   },
   "main": "dist/vue-page-designer.js",
@@ -24,7 +24,7 @@
     "deploy": "npm run build:example && npm run gh",
     "release": "npm run build && npm run bump && git push --follow-tags origin master && npm publish"
   },
-  "author": "fireyy <fireyy@gmail.com>",
+  "author": "daniildeveloper <daniildeveloper@ya.ru>",
   "dependencies": {
     "nanoid": "^1.0.1",
     "spectre.css": "^0.5.0",
