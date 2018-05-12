@@ -8,9 +8,28 @@ const messages = {
       iteration: 'Iteration',
       timing: 'Timing',
       direction: 'Direction',
+      levels: 'Z index',
 
       actions: {
         add: 'Add'
+      },
+
+      names: {
+        params: 'Params',
+        all: 'All',
+        animation: 'Animation',
+
+        width: 'Width',
+        height: 'Height',
+        left: 'Left',
+        top: 'Top',
+
+        belonging: 'Belonging container',
+      },
+
+      events: {
+        onclick: 'On click',
+        linkTo: 'Link to'
       }
     },
     messages: {
@@ -18,6 +37,13 @@ const messages = {
         animation: {
           select: 'Select animation'
         }
+      },
+
+      page: {
+        name: 'Page name',
+        height: 'Page height',
+        background: 'Background',
+        endTime: 'End time'
       }
     }
   }

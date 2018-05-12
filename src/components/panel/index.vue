@@ -1,9 +1,9 @@
 <template>
   <div>
     <ul class="tab tab-block panel-tab">
-      <li class="tab-item" :class="{active: activeTab === 1}" @click="activeTab = 1"><a>参数</a></li>
-      <li class="tab-item" :class="{active: activeTab === 2}" @click="activeTab = 2"><a>交互</a></li>
-      <li class="tab-item" :class="{active: activeTab === 3}" @click="activeTab = 3"><a>动画</a></li>
+      <li class="tab-item" :class="{active: activeTab === 1}" @click="activeTab = 1"><a>{{$t('data.names.params')}}</a></li>
+      <li class="tab-item" :class="{active: activeTab === 2}" @click="activeTab = 2"><a>{{$t('data.names.all')}}</a></li>
+      <li class="tab-item" :class="{active: activeTab === 3}" @click="activeTab = 3"><a>{{$t('data.names.animation')}}</a></li>
     </ul>
 
     <page :activeElement="activeElement" :tab="activeTab"></page>
