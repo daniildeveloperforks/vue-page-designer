@@ -28,9 +28,11 @@ import toolbar from './components/toolbar.vue'
 import panel from './components/panel/index.vue'
 import viewport from './components/viewport/index.vue'
 import loadSprite from './utils/load-sprite'
+import i18n from './plugins/i18n'
 
 export default {
   name: 'vue-page-designer',
+  i18n: i18n,
   store,
   components: {
     navbar, // 顶部导航栏

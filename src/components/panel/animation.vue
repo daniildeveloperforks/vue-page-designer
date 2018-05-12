@@ -10,7 +10,7 @@
 
     <div class="panel-row">
       <icon name="film" />
-      <div class="panel-label">选择动画</div>
+      <div class="panel-label">{{ $t('panel.animation.select') }}</div>
       <div class="panel-value">
         <select v-model="currentName">
           <option value="">无</option>
