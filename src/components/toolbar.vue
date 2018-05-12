@@ -1,7 +1,7 @@
 <template>
   <div class="menu-bar">
     <details open>
-      <summary><icon name="list" />可用组件</summary>
+      <summary><icon name="list" />{{$t('data.components')}}</summary>
       <ul class="widget-list columns" @mousedown="updateSrollTop">
         <li class="menu-item column col-6" @click="(e) => {addWidget(e, item)}" v-for="item in widgets" :key="item.name">
           <icon :svg="item.icon" :title="item.title" />
@@ -10,7 +10,7 @@
       </ul>
     </details>
     <details>
-      <summary><icon name="layers" />已加组件</summary>
+      <summary><icon name="layers" />{{$t('data.added_components')}}</summary>
       <ul class="layer-list">
         <li :class="{'layer-active': layer === activeElement}" v-for="layer in layers" :key="layer.uuid" @click="(e) => {activeLayer(e, layer)}">{{getWidgetTitle(layer.type)}}</li>
       </ul>

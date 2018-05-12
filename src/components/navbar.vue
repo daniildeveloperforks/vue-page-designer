@@ -5,13 +5,13 @@
         <icon name="anchor" />
       </section>
       <section class="navbar-section">
-        <a class="btn btn-link tooltip tooltip-bottom" data-tooltip="复制元件 Ctrl + C" @click="copyWidget">
-          <icon name="copy" /> 复制
+        <a class="btn btn-link tooltip tooltip-bottom" data-tooltip=" Ctrl + C" @click="copyWidget">
+          <icon name="copy" /> {{$t('data.actions.copy')}}
         </a>
-        <a class="btn btn-link tooltip tooltip-bottom" data-tooltip="删除元件 Delete" @click="dele">
-          <icon name="trash-2" /> 删除
+        <a class="btn btn-link tooltip tooltip-bottom" data-tooltip=" Delete" @click="dele">
+          <icon name="trash-2" /> {{$t('data.actions.delete')}}
         </a>
-        <a @click="save" class="btn btn-link tooltip tooltip-bottom" data-tooltip="保存 Ctrl + S"><icon name="save" /> 保存</a>
+        <a @click="save" class="btn btn-link tooltip tooltip-bottom" data-tooltip=" Ctrl + S"><icon name="save" /> {{$t('data.actions.save')}}</a>
       </section>
     </div>
   </header>

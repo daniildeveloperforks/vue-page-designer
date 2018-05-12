@@ -80,7 +80,7 @@ export default {
           body: data
         })
       } else {
-        alert('请配置图片上传api地址')
+        alert($t('messages.alerts.imageUploadApiConfigurator'))
       }
     },
 

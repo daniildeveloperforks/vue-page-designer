@@ -142,7 +142,7 @@ export default {
       // 检查是否存在未命名动画，避免重复添加
       if (this.$store.state.animation.some(val => val.name === '')) {
         this.$store.$emit('notify', {
-          info: '还有未命名动画，请先命名'
+          info: $t('messages.alerts.unnamedanimations')
         })
         return
       }
@@ -160,7 +160,7 @@ export default {
       var name = this.currentAnimation.name
       if (name === '') {
         this.$store.$emit('notify', {
-          info: '请先为动画命名'
+          info: $t('messages.alerts.animation_name_required')
         })
         return
       }
@@ -175,7 +175,7 @@ export default {
           this.currentAnimation.name = ''
         })
         this.$store.$emit('notify', {
-          info: '动画名称必须以英文开头'
+          info: $t('messages.alerts.animation_name_validate')
         })
       }
 
@@ -184,7 +184,7 @@ export default {
           this.currentAnimation.name = value.replace(/\W/g, '')
         })
         this.$store.$emit('notify', {
-          info: '请勿使用英文和数字以外的字符'
+          info: $t('messages.alerts.animation_name_validate')
         })
       }
     },
